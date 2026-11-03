@@ -1,0 +1,24 @@
+# Micromax 4K Android TV (TCL ODM: tcl_eu, MediaTek MT5891, armv7), India.
+# Android TV 8.0 (API 26), firmware V8-T658TAP-LF1V372, build OTT1.180130.001, kernel 3.10.79.
+# Derived from examples/tcl-50dp660/debloat.txt (same platform, tested), reduced to user-facing bloat.
+# Everything is DISABLED (pm disable-user --user 0), never uninstalled. Undo: pm enable <pkg> / revert.sh.
+#
+# Deliberately KEPT (differs from tcl-50dp660):
+#   com.tcl.versionUpdateApp, com.tcl.xian.StartandroidService   likely back Settings > SystemUpdate > Local update (USB recovery path)
+#   com.google.android.katniss, com.google.android.speech.pumpkin  search UI / voice; user wants it
+#   com.tcl.ui_mediaCenter, videoplayer, audioplayer, imageplayer   USB media playback; user wants the option
+#   com.google.android.tvlauncher                                   handled in Phase 4 (launcher swap), not here
+# Never touch: com.tcl.tv*, tvinput, tvpassthrough, sourcemananger, settings, autopair, inputmethod.international,
+#   factory.view, all com.mediatek.*, mtktvapi.agent, gms, gsf, vending, setupwraith, mediashell, webview.
+
+com.google.android.tvrecommendations                 # recommendation rows
+com.google.android.leanbacklauncher.recommendations  # recommendation rows
+com.google.android.videos                            # Play Movies (defunct)
+com.google.android.play.games                        # Play Games
+com.tcl.partnercustomizer                            # "T-Channel" promo tiles
+com.tcl.m                                            # MenuHelp
+android.autoinstalls.config.tcl.device               # silent partner-app auto-installer
+com.example.copydatatotv                             # factory test app, persistent
+com.example.tvcapture                                # factory test app
+tv.wuaki.apptv                                       # Rakuten TV preload
+com.tcl.pvr.pvrplayer                                # antenna recording

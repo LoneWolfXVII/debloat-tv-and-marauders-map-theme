@@ -1,0 +1,11 @@
+.DS_Store
+backup/
+*.pkg
+*.rar
+*.zip
+*.apk
+adbkey*
+assets/user/
+assets/characters/
+assets/scenes/
+node_modules/
